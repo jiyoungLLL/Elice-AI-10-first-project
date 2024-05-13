@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up • Portagram</title>
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/modal.css">
+</head>
+<body>
+  <div class="main">
+    <div class="register">
+      <div class = "title">
+        <div class="title_img"><img src = "/img/portgram_title.png"></div>
+        <div class = "title_text">나의 포트폴리오 공유하기</div>
+      </div>
+    
+      <div class="notice_text">Portagram에 회원가입하시고 전세계 사람들과 포트폴리오를 공유하세요.</div>
+      
+      <div class="signup-container">
+        <form id="signup-form">
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="이메일" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="비밀번호" required>
+          </div>
+          <div class="form-group">
+            <input type="password"  id="confirm-password" name="confirm-password" placeholder="비밀번호 확인"  required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="이름" required>
+          </div>
+          <div class="register_button">
+            <button type="submit" class="login">회원가입</button>
+          </div>
+        </form>
+        <p id="error-message" style="font-size: 14px; color:red;"></p>
+      </div>
+    </div>
+
+
+  <main id="main">
+    <script src="../js/footer_login.js"></script> 
+</main>
+
+</div>
+
+<div id="result-modal" class="modal">
+  <div class="modal-content">
+    <p class="text">회원가입이 완료되었습니다.</p>
+    <button class="confirm" onclick="window.location.href='/login';">확인</button>
+  </div>
+</div>
+
+  <script type="module" src="/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "faker": "^4.1.0",
+    "flash": "^1.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.4",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "path": "^0.12.7"
+  },
+  "type": "commonjs",
+  "name": "porshaw-project",
+  "description": "- 팀명 : PorShaW\r - 팀장 : 오선아\r - 프론트 : 김민석, 오선아, 이한수. 임지영\r - 백엔드 : 김나은, 김경하, 한유림",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && cp views/*.ejs dist && cp -R public/img dist && cat public/css/*.css > dist/styles.css && cp -R public/js dist"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,174 @@
+#main {
+    display: grid;
+    padding-top: 6rem;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: 
+    'Lside Main Rside'
+    'Lside Main2 Rside';
+}
+
+.Lside {
+    grid-area: Lside;
+    background-color: saddlebrown;
+}
+
+.Rside {
+    grid-area: Rside;
+    background-color: salmon;
+}
+
+#userList {
+    grid-area: Main;
+    font-family: Arial, sans-serif;
+    padding-left: 35px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px 5px;
+    place-items: center;
+    }
+
+
+
+.userProfile {
+    display: flex;
+    flex-direction: column;
+    width: 80%;  /*  카드 폭  */
+    height: 100%;  /*  카드 높이  */
+    padding: 20px 10px; /* 안쪽 여백 설정 */
+    margin-bottom: 20px; /* 하단 여백 설정 */
+    background-color: white; /* 배경색 설정 */
+    justify-content: start;
+}
+
+.NameEmail {
+    padding-top: 20px;
+    line-break: anywhere;
+   
+}
+
+.profileImage {
+    align-items: center;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 90%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.userProfile:hover .profileImage {
+    transform: scale(1.05); /* 확대 비율 조절 */
+    transition: transform 0.25s ease; /* 부드러운 전환 효과 추가 */
+}
+
+.userProfile:not(:hover) .profileImage {
+    transform: scale(1); /* 호버가 아닐 때 초기 크기로 복원 */
+    transition: transform 0.15s ease; /* 호버가 아닐 때 천천히 크기를 복원하는 효과 추가 */
+}
+
+.Lside {
+    display: grid;
+    grid-area: Lside;
+    background-color: white;
+}
+
+.Rside {
+    display: grid;
+    grid-area: Rside;
+    background-color: white;
+}
+
+@media screen and (max-width: 1023px) {
+    #userList {
+        grid-template-columns: 1fr 1fr;
+    }
+    #main {
+        grid-template-areas: 
+            'Main'
+            'Main2'; /* Lside와 Rside 제거 */
+        grid-template-columns: 1fr; /* Main 영역만 남기기 */
+        padding-left: 35px;
+    }
+    #skeleton {
+        grid-area: Main2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 15px;
+        padding-left: 66px;
+    }
+}
+#skeleton {
+    grid-area: Main2;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 66px;
+    grid-column-gap: 15px;
+}
+
+.skeleton {
+    width: 80%;
+    height: 200px;
+    background-color: white;
+    border-radius: 1rem;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    
+}
+
+  .thumbnail {
+    width: 100%; /* 썸네일 너비 */
+    height: 80%; /* 썸네일 높이 */
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    border-radius: 1rem;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load 1s infinite;
+    
+  }
+  @keyframes load {
+    100% {
+        background-position: -100% 0;
+    }
+}
+  
+  .text {
+    width: 80%; /* 텍스트 영역 너비 */
+    height: 20px; /* 텍스트 영역 높이 */
+    margin-top: 20px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);; /* 텍스트 영역 배경색 */
+    border-radius: 1rem;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load 1s infinite;
+  } 
+
+  @media screen and (max-width: 1023px) {
+    #skeleton {
+        grid-area: Main2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 70px;
+        padding-left: 66px;
+    }
+    .thumbnail {
+        width: 90%; /* 썸네일 너비 */
+        height: 80%; /* 썸네일 높이 */
+        background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+        border-radius: 1rem;
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        animation: load 1s infinite;
+        }
+        .text {
+            width: 60%; /* 텍스트 영역 너비 */
+            height: 20px; /* 텍스트 영역 높이 */
+            margin-top: 20px;
+            background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);; /* 텍스트 영역 배경색 */
+            border-radius: 1rem;
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            animation: load 1s infinite;
+          } 
+    }

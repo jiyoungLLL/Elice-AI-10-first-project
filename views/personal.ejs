@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="./css/personal.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footerMypage.css" />
+  </head>
+  <body>
+    <main id="main">
+      <div id="personal_page">
+        <div id="profile">
+          <div id="image_frame">
+            <img
+              id="profile_img"
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAL0AyAMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAgMFBAEH/8QALxABAAIBAgIIBAcBAAAAAAAAAAECAwQREjEUM0FSYXFyoSEyUbETIkKBkaLxY//EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD6cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACdcWS/y0mf2BAXdFzdz3hC2LJT5qTH7AgAAAAAAAAAAAAAAAAAAAAsxYrZbbVjzn6I46TkvFa85amLHXHSK1/0FeLTY8fZxW+srgAABTl02PJ2cNvrDhy4rYrbWjyn6tRHLjrkpNbf4DJEslJx3mtucIgAAAAAAAAAAAAAAAA7dBj2rOSec/CHWr00bYKR4brAAAAAAAcmvx71jJHOPhLiampjfBePDdlgAAAAAAAAAAAAAAAA1cE74aemE3Pob8WLh7ay6AAAAAAAQzzthv6ZZTQ11+HFw9tpZ4AAAAAAAAAAAAAAAALdPl/CyRbs5S04mJiJid4ljujTaicX5bfGn2BoDyl63jesxMPQAACZiImZnaIeXvWkb2mIhwajUTl/LX4U+4IajL+Lkm3ZyhUAAAAAAAAAAAAAAAAAAc1lcOW3Klv4BGl7UneszE+C+usyR80RZDoubue8HRc3c94Bd07/n/ZC2syT8sRVDoubue8HRc3c94BXe9rzvaZmfFFd0XN3PeEbYctedLfwCsOQAAAAAAAAAAAAAC7T4LZp35VjnIK6Utknakby7MWjrHxyTv4Q6KUrjrw1jaEgRpStI2rWI8kgAAAAAABG9K3ja1Ynzc+XR1n44528JdQDJvS2OdrxtKLWvSuSvDaN4Z+owWwzvzrPKQUgAAAAAAAA9iN52jnILNPhnLfb9Mc5aVaxWIisbRCGDHGLHFe3tWAAAAAAAAAAAAAPLVi0TFo3iXoDM1GGcN9v0zylU1M+OMuOa9vYzJjadp5wDwAAAAAB0aKnFl4p5V+7naGhrth370g6AAAAAAAAAAAAAAAAGfracOXijlb7tBz66u+HfuyDPAAAAAAamnjbBTyZbVw9Tj9MAmAAAAAAAAAAAAAAAAr1Eb4L+SxDN1N/TIMoAAAAABq4epx+mGU1cPU4/TAJgAAAAAAAAAAAAAAAIZupv6ZTQzdTf0yDKAAAB/9k="
+              alt="기본 프로필 사진"
+            />
+            <form id="photoForm" enctype="multipart/form-data">
+              <!-- 사진 제출란 -->
+              <input type="file" name="profilePhoto" />
+              <br />
+              <button class="select_photo profile" type="submit">
+                프로필사진 변경
+              </button>
+            </form>
+          </div>
+          <div id="intro">
+            <p id="user_name"></p>
+            <p>
+              <img
+                class="email_img"
+                src="https://w7.pngwing.com/pngs/425/13/png-transparent-computer-icons-email-graymail-icon-design-message-email-miscellaneous-angle-desktop-wallpaper.png"
+                alt="이메일"
+              /><span id="user_email"></span>
+            </p>
+            <p>
+              <button class="reset_info changeAccount">
+                이메일 / 비밀번호 변경
+              </button>
+            </p>
+          </div>
+        </div>
+
+        <div id="profile_content">
+          <details open>
+            <summary id="button">
+              학력
+              <span>
+                <button id="addEdu" class="btn">ADD</button>
+              </span>
+            </summary>
+            <div markdown="1" class="education">
+              <div id="education">
+                <div class="add"></div>
+              </div>
+              <div class="addContent" id="addedEducation"></div>
+            </div>
+          </details>
+
+          <details open>
+            <summary id="button">
+              수상이력<span>
+                <button id="addAward" class="btn">ADD</button>
+              </span>
+            </summary>
+            <div markdown="1" class="award">
+              <div id="award">
+                <div class="add"></div>
+              </div>
+              <div class="addContent" id="addedAward"></div>
+            </div>
+          </details>
+
+          <details open>
+            <summary id="button">
+              프로젝트<span>
+                <button id="addProject" class="btn">ADD</button>
+              </span>
+            </summary>
+            <div markdown="1" class="project">
+              <div id="project">
+                <div class="add"></div>
+              </div>
+              <div class="addContent" id="addedProject"></div>
+            </div>
+          </details>
+
+          <details open>
+            <summary id="button">
+              자격증<span>
+                <button id="addCertificate" class="btn">ADD</button>
+              </span>
+            </summary>
+            <div markdown="1" class="license">
+              <div id="certificate">
+                <div class="add"></div>
+              </div>
+              <div class="addContent" id="addedCertificate"></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="./js/personal.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/footer.js"></script>
+  <script type="module" src="./js/header_sub.js"></script>
+  <script type="module" src="/js/reset.js"></script>
+</html>
